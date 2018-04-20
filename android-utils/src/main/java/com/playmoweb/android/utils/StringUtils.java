@@ -1,5 +1,6 @@
 package com.playmoweb.android.utils;
 
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +10,7 @@ import java.util.regex.Pattern;
  * @author Playmoweb
  */
 public class StringUtils {
+    private static final Random random = new Random();
 
     public static String decodeUnicode(final String encoded) {
         final Pattern p = Pattern.compile("%u([0-9a-f]{4})", Pattern.CASE_INSENSITIVE);
@@ -42,5 +44,17 @@ public class StringUtils {
         }
         sb.append(data[data.length - 1].trim());
         return sb.toString();
+    }
+
+    public static String randomWord(final int minLength, final int maxLength) {
+        final String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        final StringBuilder randomStringBuilder = new StringBuilder();
+        char tempChar;
+        for (int i = minLength; i < maxLength; i++) {
+            final int ran = StringUtils.random.nextInt(alphabet.length());
+            tempChar = alphabet.charAt(ran);
+            randomStringBuilder.append(tempChar);
+        }
+        return randomStringBuilder.toString();
     }
 }
