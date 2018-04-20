@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_android_utils_date_utils_just_now">À l\'instant</string>
+    <string name="library_android_utils_date_utils_a_minute_ago">~1 minute</string>
+    <string name="library_android_utils_date_utils_n_minutes_ago">Il y a %1$d minutes</string>
+    <string name="library_android_utils_date_utils_an_hour_ago">Il y a 1 heure</string>
+    <string name="library_android_utils_date_utils_n_hours_ago">Il y a %1$d heures</string>
+    <string name="library_android_utils_date_utils_yesterday">Hier</string>
+    <string name="library_android_utils_date_utils_n_days_ago">Il y a %1$d jours</string>
+</resources>
