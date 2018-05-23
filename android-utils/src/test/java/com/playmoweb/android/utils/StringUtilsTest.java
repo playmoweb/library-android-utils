@@ -39,5 +39,11 @@ public class StringUtilsTest {
     public void testImplodeWithNull() {
         String result = StringUtils.implode(", ", "test1", null, "test2");
         assertEquals("test1, test2", result);
+        result = StringUtils.implode(", ", "test1", "test2", null);
+        assertEquals("test1, test2", result);
+        result = StringUtils.implode(", ", null, "test1", "test2");
+        assertEquals("test1, test2", result);
+        result = StringUtils.implode(", ", null, "test1", null, "test2", null);
+        assertEquals("test1, test2", result);
     }
 }

@@ -16,6 +16,7 @@ public class StringUtils {
 
     /**
      * Returns true if the string is null or 0-length.
+     *
      * @param str the string to be examined
      * @return true if str is null or zero length
      */
@@ -50,14 +51,14 @@ public class StringUtils {
 
     public static String implode(final String separator, final String... data) {
         final StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < data.length - 1; i++) {
+        for (int i = 0; i < data.length; i++) {
             if (!isEmpty(data[i]) && !data[i].matches(" *")) {//empty string are ""; " "; "  "; and so on
+                if (!isEmpty(sb.toString())) {
+                    sb.append(separator);
+                }
                 sb.append(data[i]);
-                sb.append(separator);
             }
         }
-        //data.length - 1 => to not add separator at the end
-        sb.append(data[data.length - 1].trim());
         return sb.toString();
     }
 }

@@ -15,7 +15,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-    compile "com.github.playmoweb:library-android-utils:1.0.2"
+    compile "com.github.playmoweb:library-android-utils:1.0.3"
 }
 ```
 
