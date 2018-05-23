@@ -1,4 +1,4 @@
-# library-android-utils
+# library-android-utils [![Build Status](https://travis-ci.org/playmoweb/library-android-utils.svg?branch=master)](https://travis-ci.org/playmoweb/library-android-utils)
 
 ## Usage
 
@@ -15,7 +15,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-    compile "com.github.playmoweb:library-android-utils:1.0.0"
+    compile "com.github.playmoweb:library-android-utils:1.0.2"
 }
 ```
 

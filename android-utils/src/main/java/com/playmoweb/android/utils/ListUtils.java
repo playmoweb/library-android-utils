@@ -1,6 +1,8 @@
 package com.playmoweb.android.utils;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -79,5 +81,13 @@ public class ListUtils {
             }
         }
         return output;
+    }
+
+    public static <T> T[] toArray(Collection<? extends T> itr, Class<T> type) {
+        return itr.toArray(newArray(type, itr.size()));
+    }
+
+    public static <T> T[] newArray(Class<T> type, int length) {
+        return (T[]) Array.newInstance(type, length);
     }
 }
