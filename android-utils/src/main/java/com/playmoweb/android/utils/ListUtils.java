@@ -2,6 +2,7 @@ package com.playmoweb.android.utils;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -89,5 +90,9 @@ public class ListUtils {
 
     public static <T> T[] newArray(Class<T> type, int length) {
         return (T[]) Array.newInstance(type, length);
+    }
+
+    public static <T> List<T> fromArray(final T[] array) {
+        return Arrays.asList(array);
     }
 }
